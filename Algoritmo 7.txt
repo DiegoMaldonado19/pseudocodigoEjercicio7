@@ -1,0 +1,27 @@
+Algoritmo algoritmo7
+	Dimension numeroAleatorio[15]
+	Definir contadorPares Como Entero
+	Definir contadorImpares Como Entero
+	Definir contadorCeros Como Entero
+	contadorPares <- 0
+	contadorImpares <- 0
+	contadorCeros <- 0
+	Para i<-1 Hasta 15 Hacer
+		numeroAleatorio[i] <- azar(36);
+	FinPara
+	Para i<-1 Hasta 15 Hacer
+		resto <- numeroAleatorio[i] MOD 2
+		Si resto==0 Entonces
+			contadorPares <- contadorPares+1
+		SiNo
+			Si numeroAleatorio[i]==0 Entonces
+				contadorCeros <- contadorCeros+1
+			SiNo
+				contadorImpares <- contadorImpares+1
+			FinSi
+		FinSi
+	FinPara
+	Escribir 'El numero de pares es: ',contadorPares,' que corresponde al ',(contadorPares/15)*100,'%'
+	Escribir 'El numero de impares es: ',contadorImpares,' que corresponde al ',(contadorImpares/15)*100,'%'
+	Escribir 'El numero de ceros es: ',contadorCeros,' que corresponde al ',(contadorCeros/15)*100,'%'
+FinAlgoritmo
